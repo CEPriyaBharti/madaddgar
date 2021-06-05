@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="./static/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  	
+</head>
+<body>
+	<div class="navbar"><div class="header-component">
+		<img src="" alt="hi">
+		<div class="signin">
+			<img src="./static/media/icons/user.png" style="margin-right: 50px !important;" onclick="myFunction()" class="dropbtn">
+			<div id="myDropdown" class="dropdown-content">
+			    <a href="#home">Sign In</a>
+			    <a href="#about">Sign Up</a>
+			    <!-- <a href="#contact">Contact</a> -->
+			 </div>
+			<a href="index.html"><img src="./static/media/icons/home.png" style="padding: 16px;"></a>
+		</div>
+	</div></div>
+	<div class="hero">
+	<div class="sidebar">
+	  <a class="active" href="index.html"><img src="./static/media/icons/dashboard.png" style="height: 13px; margin-right: 10px;">Dashboard</a>
+	  <a href="legder-management.html"><img src="./static/media/icons/balance.png" style="height: 17px; margin-right: 10px;">Ledgder Management</a>
+	  <a href="loan-management.html"><img src="./static/media/icons/loan.png" style="height: 17px; margin-right: 10px;">Loan Management</a>
+	  <a href="all-users.html"><img src="./static/media/icons/user.png" style="height: 13px; margin-right: 10px;">User Management</a>
+	  <a href="notif-for-admin.html"><img src="./static/media/icons/bell.png" style="height: 13px; margin-right: 10px;">Notification System</a>
+	  <a href="balance-sheet.html"><img src="./static/media/icons/ledger.png" style="height: 13px; margin-right: 10px;">Balance sheet</a>
+	  <!-- <a href="#about">Reports</a> -->
+	  <!-- <a href="#about">Profit/Loss/a> -->
+	  <!-- <a href="#about">Custom Reminders</a>
+	  <a href="#about">Print</a> -->
+	  <a href="#about"><img src="./static/media/icons/help.png" style="height: 13px; margin-right: 10px;">Help</a>
+	  <div class="btn"><button>About</button></div>
+	</div>
+	<div class="content">
+	  <h1 style="color:#041344;">Balance <span style="color:white; background-color: #041344;"> Sheet</span></h1>
+	  <h3>31-12-2020</h3>
+	  <div class="two-parts">
+	  	<div class="assets">
+	  		<p>Assets</p>
+	  		<p style="font-size: 19px;">Current Assets</p>
+	  		<div class="first-table">
+	  			<div class="row">Cash and cash equivalents</div>
+	  			<div class="row">1,00,000</div>
+	  			<div class="row">Accounts receivable</div>
+	  			<div class="row">20,000</div>
+	  			<div class="row">Inventory</div>
+	  			<div class="row">15,000</div>
+	  			<div class="row">Prepaid expense</div>
+	  			<div class="row">4,000</div>
+	  			<div class="row">Investments</div>
+	  			<div class="row">10,000</div>
+	  			<div class="row">Total current assets</div>
+	  			<div class="row">1,49,000</div>
+	  		</div>
+	  		<br>
+	  		<p style="font-size: 19px;">Property and equipment</p>
+	  		<div class="first-table">
+	  			<div class="row">Land</div>
+	  			<div class="row">24,300</div>
+	  			<div class="row">Buildings and improvements</div>
+	  			<div class="row">2,50,000</div>
+	  			<div class="row">Equipment</div>
+	  			<div class="row">50,000</div>
+	  			<div class="row">Less accumulated depreciation</div>
+	  			<div class="row">(5,000)</div>
+	  		</div><br>
+	  		<p style="font-size: 19px;">Other assets</p>
+	  		<div class="first-table">
+	  			<div class="row">Intangile assets</div>
+	  			<div class="row">4,000</div>
+	  			<div class="row">Less accumulated amortization</div>
+	  			<div class="row">(200)</div>
+	  		</div>
+	  		<br>
+	  		<div class="total">
+	  			<p>Total Assets : </p>
+	  			<p>4,72,100/-</p>
+	  		</div>
+
+	  	</div>
+	  	<div class="labilities">
+	  		<p>Liabilities and Share Holder's Equity</p>
+	  		<p style="font-size: 19px;">Current Liabilities</p>
+	  		<div class="second-table">
+	  			<div class="row1">Accounts payable</div>
+	  			<div class="row1">30,000</div>
+	  			<div class="row1">Notes payable</div>
+	  			<div class="row1">10,000</div>
+	  			<div class="row1">Accrued expenses</div>
+	  			<div class="row1">5,000</div>
+	  			<div class="row1">Deferred revenue</div>
+	  			<div class="row1">2,000</div>
+	  			<div class="row1">Total current liabilities</div>
+	  			<div class="row1">47,000</div>
+	  			<div class="row1">Long term debt</div>
+	  			<div class="row1">2,00,000/-</div>
+	  		</div><br>
+	  		<div class="total">
+	  			<p>Total liabilities : </p>
+	  			<p>2,47,100/-</p>
+	  		</div><br>
+	  		<p style="font-size: 19px;">Shareholder's Equity</p>
+	  		<div class="second-table">
+	  			<div class="row1">Common stock</div>
+	  			<div class="row1">10,000</div>
+	  			<div class="row1">Additional paid-in capital</div>
+	  			<div class="row1">20,000</div>
+	  			<div class="row1">Retained earnings</div>
+	  			<div class="row1">1,97,100</div>
+	  			<div class="row1">Treasury stock</div>
+	  			<div class="row1">(2,000)</div>
+	  		</div><br>
+	  		<div class="total">
+	  			<p>Total liabilities and shareholder's equity : </p>
+	  			<p>4,72,100/-</p>
+	  		</div>
+
+	  	</div>
+	  </div>
+	</div>
+	</div>
+<script>
+	function myFunction() {
+	  document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+</script>
+</body>
+</html>

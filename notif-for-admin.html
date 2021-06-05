@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notifications</title>
+	<link rel="stylesheet" href="./static/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  	
+</head>
+<body>
+	<div class="navbar"><div class="header-component">
+		<img src="" alt="hi">
+		<div class="signin">
+			<img src="./static/media/icons/user.png" style="margin-right: 50px !important;" onclick="myFunction()" class="dropbtn">
+			<div id="myDropdown" class="dropdown-content">
+			    <a href="#home">Sign In</a>
+			    <a href="#about">Sign Up</a>
+			    <!-- <a href="#contact">Contact</a> -->
+			 </div>
+			<a href="index.html"><img src="./static/media/icons/home.png" style="padding: 16px;"></a>
+		</div>
+	</div></div>
+	<div class="hero">
+	<div class="sidebar">
+	  <a href="index.html"><img src="./static/media/icons/dashboard.png" style="height: 13px; margin-right: 10px;">Dashboard</a>
+	  <a href="legder-management.html"><img src="./static/media/icons/balance.png" style="height: 17px; margin-right: 10px;">Ledgder Management</a>
+	  <a href="loan-management.html"><img src="./static/media/icons/loan.png" style="height: 17px; margin-right: 10px;">Loan Management</a>
+	  <a href="all-users.html"><img src="./static/media/icons/user.png" style="height: 13px; margin-right: 10px;">User Management</a>
+	  <a href="notif-for-admin.html"><img src="./static/media/icons/bell.png" style="height: 13px; margin-right: 10px;">Notification System</a>
+	  <a href="balance-sheet.html"><img src="./static/media/icons/ledger.png" style="height: 13px; margin-right: 10px;">Balance sheet</a>
+	  <!-- <a href="#about">Reports</a> -->
+	  <!-- <a href="#about">Profit/Loss/a> -->
+	  <!-- <a href="#about">Custom Reminders</a>
+	  <a href="#about">Print</a> -->
+	  <a href="#about"><img src="./static/media/icons/help.png" style="height: 13px; margin-right: 10px;">Help</a>
+	  <div class="btn"><button>About</button></div>
+	</div>
+	<div class="content">
+		<div class="heading-notif">
+			<h4>No.</h4>
+			<h4>Subject</h4>
+			<h4>From</h4>
+			<h4>Date/Time</h4>
+		</div>
+		<button type="button" class="collapsible">
+			<div class="notif">
+				<p>1</p>
+				<p>Approval request for Customer Application</p>
+				<p>Employee@this.com</p>
+				<p>12:11</p>
+			</div>
+		</button>
+		<div class="content-notif">
+		  <p>Customer Name</p><p>DOB</p><br>
+		  <p>Address</p><p>Contact</p><br>
+		  <p>Loan Amount</p><p>Repayment Period</p><br>
+		  <div class="notif-button">
+		  	<!-- <button>More Details</button>
+			<button>Approve</button> -->
+			<form>
+			  <!-- <label for="cars">Choose a car:</label> -->
+			  <select id="status" name="Status">
+			    <option value="status">Status</option>
+
+			    <option value="Approve">Approved</option>
+			    <option value="reject">Rejected</option>
+			    <!-- <option value="audi">Audi</option> -->
+			  </select>
+			  <!-- <input type="submit"> -->
+			</form>
+		  </div>
+		</div>
+	</div>
+</body>
+<script>
+
+
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer1", {
+	animationEnabled: true,
+	title:{
+		text: "Investment",
+		horizontalAlign: "left"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+			{ y: 100, label: "Owner" }
+			// { y: 28, label: "Archives" },
+			// { y: 10, label: "Labels" },
+			// { y: 7, label: "Drafts"},
+			// { y: 15, label: "Trash"},
+			// { y: 6, label: "Spam"}
+		]
+	}]
+});
+chart.render();
+
+var chart1 = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,  
+	title:{
+		text: "Finance Chart"
+	},
+	axisY: {
+		title: "Amount on interest",
+		valueFormatString: "#0,,.",
+		suffix: "mn",
+		stripLines: [{
+			value: 3366500,
+			label: "Average"
+		}]
+	},
+	data: [{
+		yValueFormatString: "#,### Units",
+		xValueFormatString: "YYYY",
+		type: "spline",
+		dataPoints: [
+			{x: new Date(2002, 0), y: 2506000},
+			{x: new Date(2003, 0), y: 2798000},
+			{x: new Date(2004, 0), y: 3386000},
+			{x: new Date(2005, 0), y: 6944000},
+			{x: new Date(2006, 0), y: 6026000},
+			{x: new Date(2007, 0), y: 2394000},
+			{x: new Date(2008, 0), y: 1872000},
+			{x: new Date(2009, 0), y: 2140000},
+			{x: new Date(2010, 0), y: 7289000},
+			{x: new Date(2011, 0), y: 4830000},
+			{x: new Date(2012, 0), y: 2009000},
+			{x: new Date(2013, 0), y: 2840000},
+			{x: new Date(2014, 0), y: 2396000},
+			{x: new Date(2015, 0), y: 1613000},
+			{x: new Date(2016, 0), y: 2821000},
+			{x: new Date(2017, 0), y: 2000000}
+		]
+	}]
+});
+chart1.render();
+
+}
+
+
+
+// window.onload = function () {
+// var chart1 = new CanvasJS.Chart("chartContainer", {
+// 	animationEnabled: true,  
+// 	title:{
+// 		text: "Finance Chart"
+// 	},
+// 	axisY: {
+// 		title: "Amount on interest",
+// 		valueFormatString: "#0,,.",
+// 		suffix: "mn",
+// 		stripLines: [{
+// 			value: 3366500,
+// 			label: "Average"
+// 		}]
+// 	},
+// 	data: [{
+// 		yValueFormatString: "#,### Units",
+// 		xValueFormatString: "YYYY",
+// 		type: "spline",
+// 		dataPoints: [
+// 			{x: new Date(2002, 0), y: 2506000},
+// 			{x: new Date(2003, 0), y: 2798000},
+// 			{x: new Date(2004, 0), y: 3386000},
+// 			{x: new Date(2005, 0), y: 6944000},
+// 			{x: new Date(2006, 0), y: 6026000},
+// 			{x: new Date(2007, 0), y: 2394000},
+// 			{x: new Date(2008, 0), y: 1872000},
+// 			{x: new Date(2009, 0), y: 2140000},
+// 			{x: new Date(2010, 0), y: 7289000},
+// 			{x: new Date(2011, 0), y: 4830000},
+// 			{x: new Date(2012, 0), y: 2009000},
+// 			{x: new Date(2013, 0), y: 2840000},
+// 			{x: new Date(2014, 0), y: 2396000},
+// 			{x: new Date(2015, 0), y: 1613000},
+// 			{x: new Date(2016, 0), y: 2821000},
+// 			{x: new Date(2017, 0), y: 2000000}
+// 		]
+// 	}]
+// });
+// chart1.render();
+
+
+// }
+
+
+
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "flex") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "flex";
+    }
+  });
+}
+
+
+</script>
+
+</html>

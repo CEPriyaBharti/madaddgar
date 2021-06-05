@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First form</title>
+	<link rel="stylesheet" href="./static/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<script type="text/javascript" src="calender.js"></script>
+</head>
+<body>
+	<div class="navbar"><div class="header-component">
+		<img src="" alt="hi">
+		<div class="signin">
+			<img src="./static/media/icons/user.png" style="margin-right: 50px !important;" onclick="myFunction()" class="dropbtn">
+			<div id="myDropdown" class="dropdown-content">
+			    <a href="#home">Sign In</a>
+			    <a href="#about">Sign Up</a>
+			    <!-- <a href="#contact">Contact</a> -->
+			 </div>
+			<a href="index.html"><img src="./static/media/icons/home.png" style="padding: 16px;"></a>
+		</div>
+	</div></div>
+	<div class="hero">
+	<div class="sidebar">
+	  <a class="active" href="index.html"><img src="./static/media/icons/dashboard.png" style="height: 13px; margin-right: 10px;">Dashboard</a>
+	  <a href="legder-management.html"><img src="./static/media/icons/balance.png" style="height: 17px; margin-right: 10px;">Ledgder Management</a>
+	  <a href="loan-management.html"><img src="./static/media/icons/loan.png" style="height: 17px; margin-right: 10px;">Loan Management</a>
+	  <a href="all-users.html"><img src="./static/media/icons/user.png" style="height: 13px; margin-right: 10px;">User Management</a>
+	  <a href="notif-for-admin.html"><img src="./static/media/icons/bell.png" style="height: 13px; margin-right: 10px;">Notification System</a>
+	  <a href="balance-sheet.html"><img src="./static/media/icons/ledger.png" style="height: 13px; margin-right: 10px;">Balance sheet</a>
+	  <!-- <a href="#about">Reports</a> -->
+	  <!-- <a href="#about">Profit/Loss/a> -->
+	  <!-- <a href="#about">Custom Reminders</a>
+	  <a href="#about">Print</a> -->
+	  <a href="#about"><img src="./static/media/icons/help.png" style="height: 13px; margin-right: 10px;">Help</a>
+	  <div class="btn"><button>Button</button></div>
+	</div>
+		<div class="sub-container">
+			<div class="personal-content">
+			    <h2>New Investor Application Form</h2>
+			    <div class="sections">
+			    	<div class="personal">
+			    		<p>Personal Information</p>
+			    		
+			    	</div>
+			    	<div class="personal-flex">
+				    	<div class="detail-inputs">
+				    			<input type="text" name="fname" placeholder="First Name">
+				    			<input type="text" name="lname" placeholder="Last Name">
+				    			<input type="text" name="fname" placeholder="Father's Name">
+				    			<input type="" name="fname" placeholder="Mother's Name">
+				    			<input type="text" name="fname" placeholder="Father's Name">
+				    			<input type="text" name="fname" placeholder="Father's Name">
+				    			<label for="myfile">Select a file (ID document in .png format) :</label>
+  								<input style="border:none; height: 34px;" type="file" id="myfile" name="myfile"><br><br>
+  								<label for="myfile">Select a file (passport size photo) :</label>
+  								<input style="border:none; height: 34px;" type="file" id="myfile" name="myfile"><br><br>
+				    	</div>
+				    	<div class="personal-image">
+				    		<div class="image_1">
+				    			
+				    			<img src="./static/media/icons/user.png">
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="contact">
+			    		<p>Contact Details</p>
+			    	</div>
+			    	<div class="contact-detail-inputs">
+			    			<!-- <label for="phone" >Phone no.</label> -->
+			    			<input type="tel" id="phone" name="phone" placeholder="Phone no">
+			    			<!-- <label for="email" >Email :</label> -->
+			    			<input type="email" id="email" name="email" placeholder="Email">
+
+			    			
+			    	</div>
+			    	<div class="contact">
+			    		<p>Address</p>
+			    	</div>
+			    	<div class="address-detail-inputs">
+			    			<!-- <label for="current-address" >Current Address :</label> -->
+			    			<input type="text" maxlength="200" id="current-address" name="current-address" placeholder="Current Address">
+			    			<!-- <label for="permanent-address" >Permanent Address :</label> -->
+			    			<input type="permanent-address" id="permanent-address" name="permanent-address" placeholder="Permanent Address">
+
+			    			
+			    	</div>
+			    	<div class="submit">
+			    		<div class="inner-submit">
+				    		<a href="investor-application.html">
+				    			<button >Next</button>
+				    		</a>
+				    	</div>
+			    	</div>
+			    	
+			    </div>
+			</div>
+		</div>
+	</div>
+<script>
+	function myFunction() {
+	  document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+</script>
+</body>
+</html>

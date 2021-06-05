@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="./static/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  	
+</head>
+<body>
+	<div class="navbar"><div class="header-component">
+		<img src="" alt="hi">
+		<div class="signin">
+			<img src="./static/media/icons/user.png" style="margin-right: 50px !important;" onclick="myFunction()" class="dropbtn">
+			<div id="myDropdown" class="dropdown-content">
+			    <a href="signin.html">Sign In</a>
+			    <a href="signup.html">Sign Up</a>
+			    <!-- <a href="#contact">Contact</a> -->
+			 </div>
+			<a href="index.html"><img src="./static/media/icons/home.png" style="padding: 16px;"></a>
+		</div>
+	</div></div>
+	<div class="hero">
+	<div class="sidebar">
+	  <a class="active" href="index.html"><img src="./static/media/icons/dashboard.png" style="height: 13px; margin-right: 10px;">Dashboard</a>
+	  <a href="legder-management.html"><img src="./static/media/icons/balance.png" style="height: 17px; margin-right: 10px;">Ledgder Management</a>
+	  <a href="loan-management.html"><img src="./static/media/icons/loan.png" style="height: 17px; margin-right: 10px;">Loan Management</a>
+	  <a href="all-users.html"><img src="./static/media/icons/user.png" style="height: 13px; margin-right: 10px;">User Management</a>
+	  <a href="notif-for-admin.html"><img src="./static/media/icons/bell.png" style="height: 13px; margin-right: 10px;">Notification System</a>
+	  <a href="balance-sheet.html"><img src="./static/media/icons/ledger.png" style="height: 13px; margin-right: 10px;">Balance sheet</a>
+	  <!-- <a href="#about">Reports</a> -->
+	  <!-- <a href="#about">Profit/Loss/a> -->
+	  <!-- <a href="#about">Custom Reminders</a>
+	  <a href="#about">Print</a> -->
+	  <a href="#about"><img src="./static/media/icons/help.png" style="height: 13px; margin-right: 10px;">Help</a>
+	  <div class="btn"><button>About</button></div>
+	</div>
+	<div class="content">
+	  <h2>Dashboard</h2>
+	  <div class="boxes">
+	  	<div class="box" style="background-color: #7676d0;">
+	  		<div class="logos">
+	  			<div class="parts"><img src="./static/media/icons/admins.png" style="height: 78px;"></div>
+	  			<div class="count">
+	  				<div class="int"><p>1</p></div>
+	  				<div class="count_str"><p>Admin</p></div>
+	  			</div>
+	  		</div>
+	  		<div class="inner_box"><a href="admins.html"><button style="color: #4646c8;">View Details</button></a></div>
+	  	</div>
+	  	<div class="box" style="background-color: #7fdb66;">
+	  		<div class="logos">
+	  			<div class="parts"><img src="./static/media/icons/group-256.png" style="height: 78px;"></div>
+	  			<div class="count">
+	  				<div class="int"><p>100</p></div>
+	  				<div class="count_str"><p>Customers</p></div>
+	  			</div>
+	  		</div>
+	  		<!-- <div class="inner_box"><a href="customers.html"><button><p style="color: #4eb332;">View Details</p></button></a></div> -->
+	  		<div class="inner_box"><a href="customers.html"><button style="color: #4eb332;">View Details</button></a></div>
+	  	</div>
+	  	<div class="box" style="background-color: #ffc354;">
+	  		<div class="logos">
+	  			<div class="parts"><img src="./static/media/icons/investor.png" style="height: 78px;"></div>
+	  			<div class="count">
+	  				<div class="int"><p>1</p></div>
+	  				<div class="count_str"><p>Investors</p></div>
+	  			</div>
+	  		</div>
+	  		<div class="inner_box"><a href="investors.html"><button style="color: #ffb224;">View Details</button></a></div>
+	  	</div>
+	  	<div class="box" style="background-color: #d72467;">
+	  		<div class="logos">
+	  			<div class="parts"><img src="./static/media/icons/branch.png" style="height: 78px;"></div>
+	  			<div class="count">
+	  				<div class="int"><p>4</p></div>
+	  				<div class="count_str"><p>Branches</p></div>
+	  			</div>
+	  		</div>
+	  		<div class="inner_box"><a href="new-branch1.html"><button style="color: #d72467;">View Details</button></a></div>
+	  	</div>
+	  </div>
+	  <div class="graphs">
+		  <div class="bar_graph_box">
+			<div id="chartContainer" style="height: 450px; width: 90%;"></div>
+			<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		  </div>
+		  <div class="pi_graph_box">
+			<div id="chartContainer1" style="height: 450px; width: 90%;"></div>
+			<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		  </div>
+	  </div>
+	</div>
+	</div>
+</body>
+<script>
+
+
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer1", {
+	animationEnabled: true,
+	title:{
+		text: "Investment",
+		horizontalAlign: "left"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+			{ y: 100, label: "Owner" }
+			// { y: 28, label: "Archives" },
+			// { y: 10, label: "Labels" },
+			// { y: 7, label: "Drafts"},
+			// { y: 15, label: "Trash"},
+			// { y: 6, label: "Spam"}
+		]
+	}]
+});
+chart.render();
+
+var chart1 = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,  
+	title:{
+		text: "Finance Chart"
+	},
+	axisY: {
+		title: "Amount on interest",
+		valueFormatString: "#0,,.",
+		suffix: "mn",
+		stripLines: [{
+			value: 3366500,
+			label: "Average"
+		}]
+	},
+	data: [{
+		yValueFormatString: "#,### Units",
+		xValueFormatString: "YYYY",
+		type: "spline",
+		dataPoints: [
+			{x: new Date(2002, 0), y: 2506000},
+			{x: new Date(2003, 0), y: 2798000},
+			{x: new Date(2004, 0), y: 3386000},
+			{x: new Date(2005, 0), y: 6944000},
+			{x: new Date(2006, 0), y: 6026000},
+			{x: new Date(2007, 0), y: 2394000},
+			{x: new Date(2008, 0), y: 1872000},
+			{x: new Date(2009, 0), y: 2140000},
+			{x: new Date(2010, 0), y: 7289000},
+			{x: new Date(2011, 0), y: 4830000},
+			{x: new Date(2012, 0), y: 2009000},
+			{x: new Date(2013, 0), y: 2840000},
+			{x: new Date(2014, 0), y: 2396000},
+			{x: new Date(2015, 0), y: 1613000},
+			{x: new Date(2016, 0), y: 2821000},
+			{x: new Date(2017, 0), y: 2000000}
+		]
+	}]
+});
+chart1.render();
+
+}
+
+
+
+// window.onload = function () {
+// var chart1 = new CanvasJS.Chart("chartContainer", {
+// 	animationEnabled: true,  
+// 	title:{
+// 		text: "Finance Chart"
+// 	},
+// 	axisY: {
+// 		title: "Amount on interest",
+// 		valueFormatString: "#0,,.",
+// 		suffix: "mn",
+// 		stripLines: [{
+// 			value: 3366500,
+// 			label: "Average"
+// 		}]
+// 	},
+// 	data: [{
+// 		yValueFormatString: "#,### Units",
+// 		xValueFormatString: "YYYY",
+// 		type: "spline",
+// 		dataPoints: [
+// 			{x: new Date(2002, 0), y: 2506000},
+// 			{x: new Date(2003, 0), y: 2798000},
+// 			{x: new Date(2004, 0), y: 3386000},
+// 			{x: new Date(2005, 0), y: 6944000},
+// 			{x: new Date(2006, 0), y: 6026000},
+// 			{x: new Date(2007, 0), y: 2394000},
+// 			{x: new Date(2008, 0), y: 1872000},
+// 			{x: new Date(2009, 0), y: 2140000},
+// 			{x: new Date(2010, 0), y: 7289000},
+// 			{x: new Date(2011, 0), y: 4830000},
+// 			{x: new Date(2012, 0), y: 2009000},
+// 			{x: new Date(2013, 0), y: 2840000},
+// 			{x: new Date(2014, 0), y: 2396000},
+// 			{x: new Date(2015, 0), y: 1613000},
+// 			{x: new Date(2016, 0), y: 2821000},
+// 			{x: new Date(2017, 0), y: 2000000}
+// 		]
+// 	}]
+// });
+// chart1.render();
+
+
+// }
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+</html>
